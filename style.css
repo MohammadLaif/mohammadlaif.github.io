@@ -35,20 +35,56 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 .window-header {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.95);
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     flex-shrink: 0;
+    padding: 0 20px;
 }
 
 .window-controls {
     display: flex;
     gap: 8px;
-    margin-right: 20px;
+    margin-right: 30px;
+    padding: 15px 0;
+}
+
+.window-tabs {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.tab {
+    padding: 12px 25px;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-size: 0.9em;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.tab.active {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 10px; /* Adjust for the border */
+}
+
+.tab-icon {
+    font-size: 0.8em;
+    opacity: 0.7;
 }
 
 .control {
@@ -63,8 +99,10 @@ body {
 
 h1 {
     color: white;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 500;
+    margin-right: 40px;
+    opacity: 0.8;
 }
 
 .window-body {
@@ -99,8 +137,8 @@ h1 {
 
 p {
     color: #d1d5db;
-    font-size: 1.1em;
-    margin-bottom: 20px;
+    font-size: 1.0em;
+    margin-bottom: px;
     line-height: 1.6;
 }
 
