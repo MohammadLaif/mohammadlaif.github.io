@@ -106,10 +106,47 @@ h1 {
 }
 
 .window-body {
-    padding: 30px;
+    padding: 20px 0;
     overflow-y: auto;
     flex-grow: 1;
+    counter-reset: line-counter;
 }
+
+.code-line {
+    display: flex;
+    padding: 0;
+    min-height: 24px;
+    align-items: center;
+}
+
+.code-line:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.code-line::before {
+    counter-increment: line-counter;
+    content: counter(line-counter);
+    width: 50px;
+    padding-right: 15px;
+    text-align: right;
+    color: #6272a4;
+    font-size: 0.85em;
+    user-select: none;
+    flex-shrink: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    margin-right: 15px;
+    display: block;
+}
+
+.code-content {
+    flex-grow: 1;
+    color: #d1d5db;
+    display: block;
+    line-height: 24px;
+}
+
+.indent-1 .code-content { margin-left: 20px; }
+.indent-2 .code-content { margin-left: 40px; }
 
 /* Custom Scrollbar */
 .window-body::-webkit-scrollbar {
@@ -158,3 +195,12 @@ strong {
     color: #f3f4f6;
     font-weight: 600;
 }
+
+/* Dracula Syntax Highlighting Classes */
+.dr-keyword { color: #ff79c6; }  /* Pink: Important, Keywords */
+.dr-method  { color: #bd93f9; }  /* Purple: Languages, Methods */
+.dr-string  { color: #50fa7b; }  /* Green: Strings, Done */
+.dr-cyan    { color: #8be9fd; }  /* Cyan: General tech */
+.dr-orange  { color: #ffb86c; }  /* Orange: Platforms */
+.dr-comment { color: #6272a4; }  /* Gray: Comments, Secondary */
+
