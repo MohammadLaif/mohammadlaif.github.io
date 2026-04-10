@@ -37,6 +37,18 @@ p {
     line-height: 1.6;
 }
 
+ul {
+    color: #e0e0e0;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    list-style-position: inside;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
 strong {
     color: white;
 }
